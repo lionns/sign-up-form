@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* PRIMARY COLORS */
+$tomato: hsl(4, 100%, 67%);
+/* NEUTRAL COLORS */
+$dark-slate-grey: hsl(234, 29%, 20%);
+$charcoal-grey: hsl(235, 18%, 26%);
+$grey: hsl(231, 7%, 60%);
+$white: hsl(0, 0%, 100%);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  height: 100%;
+  background-color: $charcoal-grey;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+}
+
+/* MOBILE 375px */
+
+main {
+  .card-container {
+    width: 100%;
+    height: 100%;
+    background-color: $white;
+    .card-content {
+      padding: 1.5rem;
+      color: $dark-slate-grey;
+      h1 {
+        font-size: 2.5rem;
+      }
+      p {
+        margin: 1.5rem 0;
+        line-height: 1.5rem;
+      }
+      ul {
+        margin-bottom: 2.5rem;
+        list-style: none;
+        li {
+          display: flex;
+          align-items: flex-start;
+          margin-bottom: 1rem;
+          line-height: 1.5rem;
+          &:last-of-type {
+            margin-bottom: 0;
+          }
+          img {
+            width: 21px;
+            height: 21px;
+            margin-right: 1rem;
+          }
+        }
+      }
+
+      label {
+        font-size: 0.75rem;
+        font-weight: 700;
+        display: grid;
+        grid-template-rows: auto auto;
+        grid-template-columns: 1fr 1fr;
+        span.email-error {
+            justify-self: end;
+            color: $tomato;
+            &.display-none {
+                display: none;
+            }
+        }
+        .inputPrimary {
+          grid-column: 1/3;
+          margin-top: 0.5rem;
+          margin-bottom: 1.5rem;
+          font-size: 1rem;
+          padding: 1rem 1.5rem;
+          border: 1px solid $grey;
+          border-radius: 0.5rem;
+          outline: none;
+          background-color: $white;
+          font-family: 'Roboto', sans-serif;
+          &:focus {
+            color: $dark-slate-grey;
+            border-color: $dark-slate-grey;
+          }
+          &.inputError {
+            border-color: $tomato;
+            color: $tomato;
+            background-color: rgba(255, 97, 85, 0.15);
+          }
+        }
+      }
+
+      .btn {
+        width: 100%;
+        padding: 1.125rem 0;
+        border-radius: 0.5rem;
+        border: none;
+        font-weight: 700;
+        font-family: 'Roboto', sans-serif;
+        font-size: 1rem;
+        color: $white;
+        background-color: $dark-slate-grey;
+      }
+    }
+  }
+}
+
+/* DESKTOP 1440px */
